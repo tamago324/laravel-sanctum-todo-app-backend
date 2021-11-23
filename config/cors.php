@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => ['auth/*', 'api/*', 'sanctum/csrf-cookie'],
 
     'allowed_methods' => ['*'],
 
@@ -29,6 +29,8 @@ return [
 
     'max_age' => 0,
 
-    'supports_credentials' => false,
+    // Cookie の送信とかを許可する？
+    // 'supports_credentials' => false,
+    'supports_credentials' => true,
 
 ];
